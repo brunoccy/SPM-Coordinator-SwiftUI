@@ -7,15 +7,14 @@ public class MainCoordinator: Coordinator {
     public var currentViewController: UIViewController?
     public var childCoordinators = [Coordinator]()
     public var navigationController: UINavigationController?
-    public var window: UIWindow?
 
     // MARK: Coordinators
     private var homeCoordinator: HomeCoordinator?
 
     // MARK: - Constants
-    public required init(navigationController: UINavigationController?, window: UIWindow?) {
+    public required init(navigationController: UINavigationController?) {
         self.navigationController = navigationController
-        self.window = window
+        start()
     }
 
     // MARK: - Methods
@@ -24,7 +23,7 @@ public class MainCoordinator: Coordinator {
     }
 
     func wantsToNavigateToHomePage() {
-        homeCoordinator = HomeCoordinator(navigationController: navigationController, window: window)
+        homeCoordinator = HomeCoordinator(navigationController: navigationController)
     }
 
 }

@@ -13,11 +13,9 @@ public final class HomeCoordinator: Coordinator {
     // MARK: - Variables
     public var currentViewController: UIViewController?
     public var navigationController: UINavigationController?
-    public var window: UIWindow?
 
     // MARK: - Life Cycle
-    public init(navigationController: UINavigationController?, window: UIWindow?) {
-        self.window = window
+    public init(navigationController: UINavigationController?) {
         self.navigationController = navigationController
         start()
     }

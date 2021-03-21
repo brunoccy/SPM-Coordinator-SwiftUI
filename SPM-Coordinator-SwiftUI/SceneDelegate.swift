@@ -7,16 +7,16 @@
 
 import UIKit
 import Coordinator
+import Commons
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    var coordinator: MainCoordinator?
+    var coordinator: Coordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         let navigationController = UINavigationController()
-        coordinator = MainCoordinator(navigationController: navigationController, window: window)
-        coordinator?.start()
+        coordinator = MainCoordinator(navigationController: navigationController)
 
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
