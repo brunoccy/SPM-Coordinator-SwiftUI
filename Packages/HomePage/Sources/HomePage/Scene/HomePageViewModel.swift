@@ -16,7 +16,12 @@ public final class HomePageViewModel: HomePageViewModelType {
     public init() {}
     
     // MARK: - Methods
-    public func wantsToNavigateToResult() {
-        navigationDelegate?.wantsToNavigateToResult()
+    public func wantsToNavigateToFirstFeature() {
+        navigationDelegate?.wantsToNavigateToFirstFeature()
     }
+
+    public func wantsToNavigateToSecondFeature() {
+        navigationDelegate?.wantsToNavigateToSecondFeature()
+    }
+
 }

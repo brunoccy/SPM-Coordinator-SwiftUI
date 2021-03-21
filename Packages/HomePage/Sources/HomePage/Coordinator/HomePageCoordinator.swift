@@ -9,34 +9,43 @@ import UIKit
 import SwiftUI
 import Commons
 
-public final class HomeCoordinator: Coordinator {
+public final class HomePageCoordinator: Coordinator {
     // MARK: - Variables
     public var currentViewController: UIViewController?
     public var navigationController: UINavigationController?
+    public var coordinatorDelegate: HomeCoordinatorDelegate?
 
     // MARK: - Life Cycle
     public init(navigationController: UINavigationController?) {
         self.navigationController = navigationController
-        start()
     }
 
     public func start() {
         let viewModel = HomePageViewModel()
+        viewModel.navigationDelegate = self
 
         var view = HomePageView()
         view.viewModel = viewModel
 
+
         let controller = UIHostingController(rootView: view)
         navigationController?.setViewControllers([controller], animated: true)
         navigationController!.navigationBar.isHidden = true
-
     }
 
 }
 
-//// MARK: - Home Navigation Extension
-//extension HomeCoordinator: HomeNavigationDelegate {
-//    public func wantsToNavigateToResult(CountryFrom: String, value: Double, allExchanges: Exchange) {
+// MARK: - Home Page Navigation Extension
+extension HomePageCoordinator: HomeNavigationDelegate {
+    public func wantsToNavigateToFirstFeature() {
+        coordinatorDelegate?.wantsToNavigateToFirstFeature()
+    }
+
+    public func wantsToNavigateToSecondFeature() {
+        coordinatorDelegate?.wantsToNavigateToSecondFeature()
+    }
+
+    public func wantsToNavigateToResult() {
 //        let viewModel = ResultViewModel(countryFrom: CountryFrom, value: value, allExchanges: allExchanges)
 //        viewModel.navigationDelegate = self
 //
@@ -45,12 +54,5 @@ public final class HomeCoordinator: Coordinator {
 //        navigationController?.pushViewController(view, animated: false)
 //
 //        currentViewController = view
-//    }
-//}
-//
-//// MARK: - Result Navigation Extension
-//extension CurrencyConverterCoordinator: ResultNavigationDelegate {
-//    public func wantsToNavigateToHome() {
-//        navigationController?.popViewController(animated: true)
-//    }
-//}
+    }
+}

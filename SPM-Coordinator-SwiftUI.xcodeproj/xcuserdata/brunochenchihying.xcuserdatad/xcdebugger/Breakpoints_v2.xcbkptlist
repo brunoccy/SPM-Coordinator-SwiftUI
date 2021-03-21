@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B72671C9-DD32-4078-920C-FC474C34306F"
+            uuid = "62ABB64E-F7B9-4532-86A9-B15C2A65AA71"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Packages/HomePage/Sources/HomePage/Scene/HomePageViewModel.swift"
+            filePath = "Packages/FirstFeature/Sources/FirstFeature/FirstFeatureViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "wantsToNavigateToResult()"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "wantsToNavigateToHomePage()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

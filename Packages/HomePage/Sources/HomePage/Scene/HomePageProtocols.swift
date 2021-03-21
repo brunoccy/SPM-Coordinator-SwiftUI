@@ -11,10 +11,17 @@ import Commons
 // MARK: - Protocols
 public protocol HomePageViewModelType {
     var navigationDelegate: HomeNavigationDelegate? { get set }
-    func wantsToNavigateToResult()
+    func wantsToNavigateToFirstFeature()
+    func wantsToNavigateToSecondFeature()
 }
 
 public protocol HomeNavigationDelegate {
-    func wantsToNavigateToResult()
+    func wantsToNavigateToFirstFeature()
+    func wantsToNavigateToSecondFeature()
+}
+
+public protocol HomeCoordinatorDelegate {
+    func wantsToNavigateToFirstFeature()
+    func wantsToNavigateToSecondFeature()
 }
 

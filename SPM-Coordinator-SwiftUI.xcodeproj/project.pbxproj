@@ -57,6 +57,7 @@
 		89160E532606AD0500CBD488 /* HomePage */ = {isa = PBXFileReference; lastKnownFileType = folder; name = HomePage; path = Packages/HomePage; sourceTree = "<group>"; };
 		89160E572606AD0B00CBD488 /* DesignSystem */ = {isa = PBXFileReference; lastKnownFileType = folder; name = DesignSystem; path = Packages/DesignSystem; sourceTree = "<group>"; };
 		89160E5B2606AD1000CBD488 /* Coordinator */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Coordinator; path = Packages/Coordinator; sourceTree = "<group>"; };
+		8987EC802607CE3A002114DC /* FirstFeature */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FirstFeature; path = Packages/FirstFeature; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +92,7 @@
 		89160E0F2606AA9200CBD488 = {
 			isa = PBXGroup;
 			children = (
+				8987EC802607CE3A002114DC /* FirstFeature */,
 				89160E5B2606AD1000CBD488 /* Coordinator */,
 				89160E572606AD0B00CBD488 /* DesignSystem */,
 				89160E532606AD0500CBD488 /* HomePage */,
