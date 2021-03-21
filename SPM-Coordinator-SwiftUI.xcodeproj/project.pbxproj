@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,10 @@
 		89160E282606AA9300CBD488 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89160E262606AA9300CBD488 /* LaunchScreen.storyboard */; };
 		89160E332606AA9300CBD488 /* SPM_Coordinator_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89160E322606AA9300CBD488 /* SPM_Coordinator_SwiftUITests.swift */; };
 		89160E3E2606AA9300CBD488 /* SPM_Coordinator_SwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89160E3D2606AA9300CBD488 /* SPM_Coordinator_SwiftUIUITests.swift */; };
+		89AC57E32606B66E007E7F0C /* Commons in Frameworks */ = {isa = PBXBuildFile; productRef = 89AC57E22606B66E007E7F0C /* Commons */; };
+		89AC57E52606B675007E7F0C /* Coordinator in Frameworks */ = {isa = PBXBuildFile; productRef = 89AC57E42606B675007E7F0C /* Coordinator */; };
+		89AC57E72606B678007E7F0C /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 89AC57E62606B678007E7F0C /* DesignSystem */; };
+		89AC57E92606B67B007E7F0C /* HomePage in Frameworks */ = {isa = PBXBuildFile; productRef = 89AC57E82606B67B007E7F0C /* HomePage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		89160E392606AA9300CBD488 /* SPM-Coordinator-SwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SPM-Coordinator-SwiftUIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89160E3D2606AA9300CBD488 /* SPM_Coordinator_SwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPM_Coordinator_SwiftUIUITests.swift; sourceTree = "<group>"; };
 		89160E3F2606AA9300CBD488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89160E522606AD0000CBD488 /* Commons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Commons; path = Packages/Commons; sourceTree = "<group>"; };
+		89160E532606AD0500CBD488 /* HomePage */ = {isa = PBXFileReference; lastKnownFileType = folder; name = HomePage; path = Packages/HomePage; sourceTree = "<group>"; };
+		89160E572606AD0B00CBD488 /* DesignSystem */ = {isa = PBXFileReference; lastKnownFileType = folder; name = DesignSystem; path = Packages/DesignSystem; sourceTree = "<group>"; };
+		89160E5B2606AD1000CBD488 /* Coordinator */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Coordinator; path = Packages/Coordinator; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89AC57E72606B678007E7F0C /* DesignSystem in Frameworks */,
+				89AC57E32606B66E007E7F0C /* Commons in Frameworks */,
+				89AC57E92606B67B007E7F0C /* HomePage in Frameworks */,
+				89AC57E52606B675007E7F0C /* Coordinator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +91,15 @@
 		89160E0F2606AA9200CBD488 = {
 			isa = PBXGroup;
 			children = (
+				89160E5B2606AD1000CBD488 /* Coordinator */,
+				89160E572606AD0B00CBD488 /* DesignSystem */,
+				89160E532606AD0500CBD488 /* HomePage */,
+				89160E522606AD0000CBD488 /* Commons */,
 				89160E1A2606AA9200CBD488 /* SPM-Coordinator-SwiftUI */,
 				89160E312606AA9300CBD488 /* SPM-Coordinator-SwiftUITests */,
 				89160E3C2606AA9300CBD488 /* SPM-Coordinator-SwiftUIUITests */,
 				89160E192606AA9200CBD488 /* Products */,
+				89160E5F2606ADBF00CBD488 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +145,13 @@
 			path = "SPM-Coordinator-SwiftUIUITests";
 			sourceTree = "<group>";
 		};
+		89160E5F2606ADBF00CBD488 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +168,12 @@
 			dependencies = (
 			);
 			name = "SPM-Coordinator-SwiftUI";
+			packageProductDependencies = (
+				89AC57E22606B66E007E7F0C /* Commons */,
+				89AC57E42606B675007E7F0C /* Coordinator */,
+				89AC57E62606B678007E7F0C /* DesignSystem */,
+				89AC57E82606B67B007E7F0C /* HomePage */,
+			);
 			productName = "SPM-Coordinator-SwiftUI";
 			productReference = 89160E182606AA9200CBD488 /* SPM-Coordinator-SwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -438,6 +468,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "SPM-Coordinator-SwiftUI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,6 +487,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "SPM-Coordinator-SwiftUI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -587,6 +619,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		89AC57E22606B66E007E7F0C /* Commons */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Commons;
+		};
+		89AC57E42606B675007E7F0C /* Coordinator */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Coordinator;
+		};
+		89AC57E62606B678007E7F0C /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DesignSystem;
+		};
+		89AC57E82606B67B007E7F0C /* HomePage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HomePage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 89160E102606AA9200CBD488 /* Project object */;
 }
