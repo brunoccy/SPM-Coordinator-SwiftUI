@@ -14,16 +14,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var coordinator: MainCoordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = scene as? UIWindowScene else { return }
-
-        let navController = UINavigationController()
-        navController.navigationBar.isHidden = true
-        coordinator = MainCoordinator(navigationController: navController)
-        coordinator?.window = window
+        let navigationController = UINavigationController()
+        coordinator = MainCoordinator(navigationController: navigationController, window: window)
         coordinator?.start()
 
-        window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = navController
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
 

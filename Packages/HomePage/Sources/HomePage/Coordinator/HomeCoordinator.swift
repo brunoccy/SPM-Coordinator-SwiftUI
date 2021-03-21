@@ -13,22 +13,25 @@ public final class HomeCoordinator: Coordinator {
     // MARK: - Variables
     public var currentViewController: UIViewController?
     public var navigationController: UINavigationController?
+    public var window: UIWindow?
 
     // MARK: - Life Cycle
-    public init(navigationController: UINavigationController) {
+    public init(navigationController: UINavigationController?, window: UIWindow?) {
+        self.window = window
         self.navigationController = navigationController
+        start()
+    }
 
+    public func start() {
         let viewModel = HomePageViewModel()
 
         var view = HomePageView()
         view.viewModel = viewModel
 
         let controller = UIHostingController(rootView: view)
+        navigationController?.setViewControllers([controller], animated: true)
+        navigationController!.navigationBar.isHidden = true
 
-        let nav = UINavigationController(rootViewController: controller)
-        nav.navigationBar.isHidden = true
-//        window?.rootViewController = nav
-//        window?.makeKeyAndVisible()
     }
 
 }

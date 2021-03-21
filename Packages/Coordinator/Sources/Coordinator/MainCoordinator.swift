@@ -10,11 +10,12 @@ public class MainCoordinator: Coordinator {
     public var window: UIWindow?
 
     // MARK: Coordinators
-//    private var homeCoordinator: CurrencyConverterCoordinator?
+    private var homeCoordinator: HomeCoordinator?
 
     // MARK: - Constants
-    required public init(navigationController: UINavigationController) {
+    public required init(navigationController: UINavigationController?, window: UIWindow?) {
         self.navigationController = navigationController
+        self.window = window
     }
 
     // MARK: - Methods
@@ -23,22 +24,7 @@ public class MainCoordinator: Coordinator {
     }
 
     func wantsToNavigateToHomePage() {
-        let viewModel = HomePageViewModel()
-
-        var view = HomePageView()
-        view.viewModel = viewModel
-//        environmentObject(viewModel)
-        let controller = UIHostingController(rootView: view)
-        let nav = UINavigationController(rootViewController: controller)
-        nav.navigationBar.isHidden = true
-        window?.rootViewController = nav
-        window?.makeKeyAndVisible()
-
-//        guard let navigation = navigationController else { return }
-//        homeCoordinator = CurrencyConverterCoordinator(navigationController: navigation)
-//
-//        guard let child = homeCoordinator else { return }
-//        childCoordinators.append(child)
+        homeCoordinator = HomeCoordinator(navigationController: navigationController, window: window)
     }
 
 }

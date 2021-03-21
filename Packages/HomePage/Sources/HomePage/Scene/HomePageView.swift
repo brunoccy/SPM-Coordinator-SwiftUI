@@ -16,7 +16,7 @@ public struct HomePageView: View {
     public var body: some View {
         VStack(spacing: 15) {
             Button(action: { print("Hi") }, label: {
-                Text("Currency Converter")
+                Text("First View")
             }).buttonStyle(BaseButton())
             Button(action: { print("Hi") }, label: {
                 Text("Second View")
