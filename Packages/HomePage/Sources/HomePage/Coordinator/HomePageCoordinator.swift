@@ -13,7 +13,7 @@ public final class HomePageCoordinator: Coordinator {
     // MARK: - Variables
     public var currentViewController: UIViewController?
     public var navigationController: UINavigationController?
-    public var coordinatorDelegate: HomeCoordinatorDelegate?
+    public weak var coordinatorDelegate: HomeCoordinatorDelegate?
 
     // MARK: - Life Cycle
     public init(navigationController: UINavigationController?) {

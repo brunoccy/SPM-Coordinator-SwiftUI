@@ -8,7 +8,16 @@
             <PersistentString
                value = "window">
             </PersistentString>
+            <PersistentString
+               value = "viewModel">
+            </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #3 in closure #1 in closure #1 in FirstFeatureView.body.getter:FirstFeatureView.swift">
+      </ContextState>
+      <ContextState
+         contextName = "FirstFeatureViewModel.wantsToNavigateToHomePage():FirstFeatureViewModel.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

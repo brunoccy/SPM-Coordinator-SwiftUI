@@ -64,7 +64,7 @@ extension MainCoordinator: HomeCoordinatorDelegate {
         firstFeatureCoordinator?.coordinatorDelegate = self
         firstFeatureCoordinator?.start()
 
-        removeDependency(homeCoordinator)
+//        removeDependency(homeCoordinator)
     }
 
     public func wantsToNavigateToSecondFeature() {

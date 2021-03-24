@@ -9,17 +9,18 @@ import Foundation
 import Commons
 
 // MARK: - Protocols
-public protocol FirstFeatureViewModelType {
+public protocol FirstFeatureViewModelType: class {
     var navigationDelegate: FirstFeatureNavigationDelegate? { get set }
     func wantsToNavigateToHomePage()
     func wantsToNavigateToSecondFeature()
 }
 
-public protocol FirstFeatureNavigationDelegate {
+public protocol FirstFeatureNavigationDelegate: class {
+    func wantsToNavigateToHomeCoordinator()
     func wantsToNavigateToSecondFeature()
 }
 
-public protocol FirstFeatureCoordinatorDelegate {
+public protocol FirstFeatureCoordinatorDelegate: class {
     func wantsToNavigateToHomeCoordinator()
 }
 

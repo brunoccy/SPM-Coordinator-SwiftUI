@@ -5,7 +5,6 @@
 //  Created by bruno chen chih ying on 21/03/21.
 //
 
-import UIKit
 import SwiftUI
 import Commons
 
@@ -13,7 +12,7 @@ public final class FirstFeatureCoordinator: Coordinator {
     // MARK: - Variables
     public var currentViewController: UIViewController?
     public var navigationController: UINavigationController?
-    public var coordinatorDelegate: FirstFeatureCoordinatorDelegate?
+    public weak var coordinatorDelegate: FirstFeatureCoordinatorDelegate?
 
     // MARK: - Life Cycle
     public init(navigationController: UINavigationController?) {
@@ -22,14 +21,24 @@ public final class FirstFeatureCoordinator: Coordinator {
 
     public func start() {
         let viewModel = FirstFeatureViewModel()
-        viewModel.coordinatorDelegate = coordinatorDelegate
+        viewModel.navigationDelegate = self
 
         var view = FirstFeatureView()
         view.viewModel = viewModel
 
         let controller = UIHostingController(rootView: view)
-        navigationController?.setViewControllers([controller], animated: true)
-        navigationController!.navigationBar.isHidden = true
+
+        navigationController?.pushViewController(controller, animated: true)
+    }
+}
+
+// MARK: - Navigation Delegate
+extension FirstFeatureCoordinator: FirstFeatureNavigationDelegate {
+    public func wantsToNavigateToHomeCoordinator() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    public func wantsToNavigateToSecondFeature() {
 
     }
 

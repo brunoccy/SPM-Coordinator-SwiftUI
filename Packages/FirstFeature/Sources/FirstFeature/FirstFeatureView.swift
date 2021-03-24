@@ -8,8 +8,8 @@
 import SwiftUI
 import DesignSystem
 
-struct FirstFeatureView: View {
-    public var viewModel: FirstFeatureViewModelType?
+public struct FirstFeatureView: View {
+    var viewModel: FirstFeatureViewModelType?
 
     public var body: some View {
         NavigationView {
