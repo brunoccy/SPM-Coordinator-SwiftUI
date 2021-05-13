@@ -17,11 +17,11 @@ public final class FirstFeatureViewModel: FirstFeatureViewModelType {
     public init() {}
 
     // MARK: - Methods
-    public func wantsToNavigateToHomePage() {
+    public func wantsToNavigateToHomeFeature() {
         navigationDelegate!.wantsToNavigateToHomeCoordinator()
     }
 
-    public func wantsToNavigateToSecondFeature() {
-        navigationDelegate?.wantsToNavigateToSecondFeature()
+    public func wantsToNavigateToSecondPage() {
+        navigationDelegate?.wantsToNavigateToSecondPage()
     }
 }

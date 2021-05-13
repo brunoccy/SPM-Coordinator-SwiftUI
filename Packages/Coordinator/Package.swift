@@ -7,7 +7,6 @@ let package = Package(
     name: "Coordinator",
     platforms: [.iOS(.v13)],
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "Coordinator",
             targets: ["Coordinator"]),
@@ -16,13 +15,12 @@ let package = Package(
         .package(path: "../Commons"),
         .package(path: "../HomePage"),
         .package(path: "../FirstFeature"),
+        .package(path: "../SecondFeature"),
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "Coordinator",
-            dependencies: ["Commons", "HomePage", "FirstFeature"]),
+            dependencies: ["Commons", "HomePage", "FirstFeature", "SecondFeature"]),
         .testTarget(
             name: "CoordinatorTests",
             dependencies: ["Coordinator"]),

@@ -44,15 +44,4 @@ extension HomePageCoordinator: HomeNavigationDelegate {
     public func wantsToNavigateToSecondFeature() {
         coordinatorDelegate?.wantsToNavigateToSecondFeature()
     }
-
-    public func wantsToNavigateToResult() {
-//        let viewModel = ResultViewModel(countryFrom: CountryFrom, value: value, allExchanges: allExchanges)
-//        viewModel.navigationDelegate = self
-//
-//        let view = ResultViewController.instantiate(storyboardName: "ResultViewController")
-//        view.viewModel = viewModel
-//        navigationController?.pushViewController(view, animated: false)
-//
-//        currentViewController = view
-    }
 }

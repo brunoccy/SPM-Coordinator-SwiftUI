@@ -9,7 +9,7 @@ import Foundation
 import Commons
 
 // MARK: - Protocols
-public protocol HomePageViewModelType: class {
+public protocol HomePageViewModelType: AnyObject {
     var navigationDelegate: HomeNavigationDelegate? { get set }
     func wantsToNavigateToFirstFeature()
     func wantsToNavigateToSecondFeature()
@@ -20,7 +20,7 @@ public protocol HomeNavigationDelegate {
     func wantsToNavigateToSecondFeature()
 }
 
-public protocol HomeCoordinatorDelegate: class {
+public protocol HomeCoordinatorDelegate: AnyObject {
     func wantsToNavigateToFirstFeature()
     func wantsToNavigateToSecondFeature()
 }

@@ -14,15 +14,15 @@ public struct FirstFeatureView: View {
     public var body: some View {
         NavigationView {
             VStack(spacing: 15) {
-                Button(action: { print("Hi") }, label: {
+                Button(action: { viewModel?.wantsToNavigateToSecondPage() }, label: {
                     Text("First Feature Page 2")
                 }).buttonStyle(BaseButton())
-                Button(action: { viewModel?.wantsToNavigateToHomePage() }, label: {
+                Button(action: { viewModel?.wantsToNavigateToHomeFeature() }, label: {
                     Text("Home Coordinator")
                 }).buttonStyle(BaseButton())
             }
             .padding()
-            .navigationBarTitle("First Feature Page 1")
+            .navigationBarTitle("Page 1 (First Feature)")
         }
     }
 }
