@@ -13,11 +13,12 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../DesignSystem"),
+        .package(path: "../Commons"),
     ],
     targets: [
         .target(
             name: "HomePage",
-            dependencies: ["DesignSystem"]),
+            dependencies: ["DesignSystem", "Commons"]),
         .testTarget(
             name: "HomePageTests",
             dependencies: ["HomePage"]),

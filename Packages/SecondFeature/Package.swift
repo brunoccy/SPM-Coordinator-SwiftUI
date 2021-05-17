@@ -4,12 +4,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "FirstFeature",
+    name: "SecondFeature",
     platforms: [.iOS(.v13)],
     products: [
         .library(
-            name: "FirstFeature",
-            targets: ["FirstFeature"]),
+            name: "SecondFeature",
+            targets: ["SecondFeature"]),
     ],
     dependencies: [
         .package(path: "../DesignSystem"),
@@ -17,10 +17,10 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "FirstFeature",
+            name: "SecondFeature",
             dependencies: ["DesignSystem", "Commons"]),
         .testTarget(
-            name: "FirstFeatureTests",
-            dependencies: ["FirstFeature"]),
+            name: "SecondFeatureTests",
+            dependencies: ["SecondFeature"]),
     ]
 )

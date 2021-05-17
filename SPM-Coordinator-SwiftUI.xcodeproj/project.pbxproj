@@ -19,6 +19,8 @@
 		89AC57E52606B675007E7F0C /* Coordinator in Frameworks */ = {isa = PBXBuildFile; productRef = 89AC57E42606B675007E7F0C /* Coordinator */; };
 		89AC57E72606B678007E7F0C /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 89AC57E62606B678007E7F0C /* DesignSystem */; };
 		89AC57E92606B67B007E7F0C /* HomePage in Frameworks */ = {isa = PBXBuildFile; productRef = 89AC57E82606B67B007E7F0C /* HomePage */; };
+		FD6CF6632652DF7B0093E800 /* SecondFeature in Frameworks */ = {isa = PBXBuildFile; productRef = FD6CF6622652DF7B0093E800 /* SecondFeature */; };
+		FD7E6B132652E14000E560E1 /* FirstFeature in Frameworks */ = {isa = PBXBuildFile; productRef = FD7E6B122652E14000E560E1 /* FirstFeature */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +60,7 @@
 		89160E572606AD0B00CBD488 /* DesignSystem */ = {isa = PBXFileReference; lastKnownFileType = folder; name = DesignSystem; path = Packages/DesignSystem; sourceTree = "<group>"; };
 		89160E5B2606AD1000CBD488 /* Coordinator */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Coordinator; path = Packages/Coordinator; sourceTree = "<group>"; };
 		8987EC802607CE3A002114DC /* FirstFeature */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FirstFeature; path = Packages/FirstFeature; sourceTree = "<group>"; };
-		FD758661264C0E0700CA2AE9 /* SecondFeature */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SecondFeature; path = Packages/SecondFeature; sourceTree = "<group>"; };
+		FD3D673E2652DF5B00C2A367 /* SecondFeature */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SecondFeature; path = Packages/SecondFeature; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,8 @@
 				89AC57E72606B678007E7F0C /* DesignSystem in Frameworks */,
 				89AC57E32606B66E007E7F0C /* Commons in Frameworks */,
 				89AC57E92606B67B007E7F0C /* HomePage in Frameworks */,
+				FD6CF6632652DF7B0093E800 /* SecondFeature in Frameworks */,
+				FD7E6B132652E14000E560E1 /* FirstFeature in Frameworks */,
 				89AC57E52606B675007E7F0C /* Coordinator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,7 +97,7 @@
 		89160E0F2606AA9200CBD488 = {
 			isa = PBXGroup;
 			children = (
-				FD758661264C0E0700CA2AE9 /* SecondFeature */,
+				FD3D673E2652DF5B00C2A367 /* SecondFeature */,
 				8987EC802607CE3A002114DC /* FirstFeature */,
 				89160E5B2606AD1000CBD488 /* Coordinator */,
 				89160E572606AD0B00CBD488 /* DesignSystem */,
@@ -177,6 +181,8 @@
 				89AC57E42606B675007E7F0C /* Coordinator */,
 				89AC57E62606B678007E7F0C /* DesignSystem */,
 				89AC57E82606B67B007E7F0C /* HomePage */,
+				FD6CF6622652DF7B0093E800 /* SecondFeature */,
+				FD7E6B122652E14000E560E1 /* FirstFeature */,
 			);
 			productName = "SPM-Coordinator-SwiftUI";
 			productReference = 89160E182606AA9200CBD488 /* SPM-Coordinator-SwiftUI.app */;
@@ -640,6 +646,14 @@
 		89AC57E82606B67B007E7F0C /* HomePage */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = HomePage;
+		};
+		FD6CF6622652DF7B0093E800 /* SecondFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SecondFeature;
+		};
+		FD7E6B122652E14000E560E1 /* FirstFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirstFeature;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
