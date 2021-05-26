@@ -1,5 +1,5 @@
-# Modular Architecture with MVVM-C + SPM + SwiftUI 📱
-<p align="left">Basic implementation of the Modular Architecture using the most modern tools</p>
+# Modular Architecture with MVVM-C (Coordinator) + SPM + SwiftUI 📱
+<p align="left">Basic implementation of the Modular Architecture using the most modern tools like:</p>
 
 See more about this project in this post:
 
